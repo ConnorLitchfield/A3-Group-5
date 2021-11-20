@@ -1,0 +1,38 @@
+<html>
+<body style="background-color:black;">
+
+<div style="text-align:center"> 
+  
+ <center> 
+
+<a id="button1" onclick="play()">
+<img src="images/playbutton.png"  height="100%" alt="#">
+</a>
+ 
+  <video id="video1" height="100%" width="100%" style="display:none;">
+    <source src="video/home.mp4" preload="auto" type="video/mp4">
+    Your browser does not support HTML video.
+  </video>
+</div> 
+
+</center>
+
+<script> 
+var myVideo = document.getElementById("video1"); 
+var button = document.getElementById("button1"); 
+
+function play() { 
+    myVideo.play(); 
+    myVideo.style.display = "block";
+    button.style.display = "none";
+} 
+
+myVideo.onended = function(e) {
+  window.location.replace("Index.html");
+};
+
+</script> 
+
+
+</body> 
+</html>
